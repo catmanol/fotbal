@@ -1,0 +1,44 @@
+<table id="fundal"><tr>
+<td><div id='selectie'>
+    <?php foreach ($this->questions as $value): ?>
+    <a href="<?php echo $this->url(array('controller'=>'players','action'=>'index','test'=>$value->id_query)); ?>">
+    <?php echo $value->intrebare; ?></a><br/>
+    <?php endforeach; ?>
+</div></td>
+<td><div id="afisare">
+    <h2><?php echo $this->titlu; ?></h2>
+    <span id='legend'>Tara: </span><input type='text' name='select_tara' id='tara' /><br/><hr/>
+    <div id='choose'></div>
+    <?php echo $this->partial('table.phtml', array(
+        'titlu'=>$this->titlu,
+        'cap'=>$this->cap,
+        'date'=>$this->result
+    )); ?>
+</div></td>
+</tr></table>
+<script>
+    $('#tara').bind('keyup',function(e){
+        if (e.which==13) {
+            e.preventDefault();
+        } else {
+            var tara=$('#tara').val();
+            var url = "<?php echo $this->url(array('controller'=>'players','action'=>'ajax')); ?>";
+            $.post(url,{q:tara},function(data) {
+                $('#choose').show().html(data);
+            });
+        }
+    });
+    $('#ul_sel_tara>li').live('mouseover',function(e) {
+        $(this).css('background-color','red');
+        //alert($tara);
+    }).live('mouseout',function(e) {
+        $(this).css('background-color','yellow');
+    });
+    $('#ul_sel_tara>li').live('click',function(e) {
+        $('#tara').val($(this).text());
+        var tara=$('#tara').val();
+        var url='';
+        url="<?php echo $this->url(array('controller'=>'players','action'=>'index','test'=>$this->id,'tara'=>'')); ?>"+tara;
+        window.location=url;
+    });
+</script>

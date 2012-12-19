@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+  <nav>
+        <players>
+          <label>Jucatori</label>
+          <controller>players</controller>
+          <action>index</action>
+        </players>
+        <country>
+          <label>Echipe</label>
+          <controller>teams</controller>
+          <action>index</action>
+        </country>
+        <diverse>
+          <label>Diverse</label>
+          <controller>index</controller>
+          <action>index</action>
+        </diverse>
+  </nav>
+</configdata>

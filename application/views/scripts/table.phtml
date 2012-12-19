@@ -1,0 +1,21 @@
+<?php if ($this->date!==NULL): ?>
+<table class="jucatori">
+    <tr>
+        <?php $count=count($this->cap); ?>
+        <?php foreach ($this->cap as $value): ?>
+        <th><?php echo $value; ?></th>
+        <?php endforeach; ?>
+    </tr>
+    <?php $i=1; ?>
+    <?php foreach ($this->date as $value): ?>
+    <tr>
+        <td><?php echo $i; ?></td>
+        <?php for ($j=0;$j<$count-2;$j++): ?>
+            <td><?php echo $value[$j]; ?></td>
+        <?php endfor; ?>
+        <td align='right'><?php echo $value[$count-2]; ?></td>
+        <?php $i++ ?>
+    </tr>
+    <?php endforeach; ?>
+</table>
+<?php endif; ?>

@@ -1,0 +1,124 @@
+body {
+  font-size: 10px;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+h1{
+  font-size:4em;
+  text-align: center;
+  padding-top:.3em;
+}
+#pageWrapper {
+  background: #999;
+  width: 99em;
+  margin: 1em auto;
+  padding: .5em;
+}
+#header {
+  background: #fff;
+  height: 7.5em;
+  margin: 0 0 .5em 0;
+}
+#nav {
+  background: #fff;
+  height: 2.5em;
+  margin-bottom: .5em;
+}
+#sidebar {
+  height: 49em;
+  margin: 0 .5em .5em 0;
+  background: #fff;
+}
+#mmain{
+  background: #fff;
+  border: 5px solid #ccc;
+  width:76em;
+  height:48em;
+  float:right;
+  overflow-y: scroll;
+}
+#main {
+  background: #fff;
+  height: 48em;
+  width: 74em;
+}
+footer {
+  clear: both;
+  background: #fff;
+  height: 2.5em;
+  margin: 0;
+}
+table.spreadsheet{
+  margin: 0;
+  border-collapse: collapse;
+  width:74em;
+}
+table.spreadsheet td {
+  border-bottom:#999 1px solid;
+  padding: 5px 5px;
+  font-size:1.2em;
+}
+.navigation li{
+  list-style-type: none;
+}
+.navigation>li{
+    font-size:1.5em;
+    float:left;
+    padding-right:10px;
+}
+.navigation>li>ul>li{
+    font-size: .8em;
+    float:left;
+    padding-right:8px;
+}
+.spanMeci{
+    background: #ddd;
+    padding:2px 5px;
+    border:1px solid #999;
+    cursor:pointer;
+}
+.jucatori {
+    border-collapse: collapse;
+}
+.jucatori tr td,th {
+    border: 1px solid black;
+    padding: 2px 5px;
+    font-size: 1.2em;
+}
+#fundal tr>td {
+    vertical-align: top;
+    padding-left:5px;
+}
+#selectie {
+    font-size:1.2em;
+    background-color: #fff;
+    padding:5px;
+}
+#afisare {
+    background-color: #fff;
+    padding:5px;
+    padding-left:40px;
+}
+#legend {
+    font-size: 1.3em;
+}
+#choose {
+    font-size:1.4em;
+    position: relative;
+    z-index: 10;
+    left:30px;
+    width: 130px;
+    background-color: yellow;
+    border: 1px solid black;
+    display:none;
+}
+#afisare input {
+    background-color: yellow;
+    border: 1px solid black;
+}
+#ul_sel_tara li {
+    cursor:pointer;
+    list-style-type: none;
+}

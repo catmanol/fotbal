@@ -1,0 +1,34 @@
+<?php 
+$this->headMeta()->appendHttpEquiv('Content-Type','text/html;charset=utf-8');
+$this->HeadTitle('Football players');
+echo $this->doctype();
+?>
+<html>
+  <head>
+    <?php echo $this->headMeta(); ?>
+    <?php echo $this->headTitle(); ?>
+    <?php echo $this->headLink()->appendStylesheet($this->baseUrl().'/css/style.css'); ?>
+    <?php echo $this->headScript()->appendFile($this->baseUrl().'/js/proc.js'); ?>
+    <?php echo $this->headScript()->appendFile('http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'); ?>
+
+  </head>
+  <body>
+    <div id="pageWrapper">
+      <div id="header">
+        <h1>All about football</h1>
+      </div>
+      <div id="nav">
+        <?php 
+        echo $this->navigation()->menu(); ?>&nbsp;
+      </div>
+      <div id="content">
+            <?php echo $this->layout()->content; ?>
+      </div>
+      <div id="footer">
+        <p onclick="showDetailMeci()"><em>Powered by CATA</em></p>
+      </div>
+    </div>
+      <script>
+</script>
+  </body>
+</html>
